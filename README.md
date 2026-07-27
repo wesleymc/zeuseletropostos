@@ -67,10 +67,21 @@ quanto em subpasta — não precisa mexer em nada.
 Crie um repositório chamado `SEU-USUARIO.github.io`, coloque estes arquivos na raiz
 e faça push. O site fica em `https://SEU-USUARIO.github.io/`.
 
-### Domínio próprio (opcional)
+### Domínio próprio: `zeuseletropostos.iaas.chat`
 
-Adicione um arquivo `CNAME` na raiz com o domínio (ex.: `zeuseletropostos.com.br`)
-e aponte o DNS conforme a documentação do GitHub Pages.
+O arquivo `CNAME` na raiz já contém `zeuseletropostos.iaas.chat`. Para ativar:
+
+1. **DNS** (onde o domínio `iaas.chat` é gerenciado) — crie um registro:
+   ```
+   Tipo: CNAME   Nome: zeuseletropostos   Valor: SEU-USUARIO.github.io
+   ```
+   (subdomínio usa CNAME; apex usaria os IPs `185.199.108.153/109/110/111`.)
+2. **GitHub** → Settings → Pages → Custom domain → `zeuseletropostos.iaas.chat` → Save.
+3. Aguarde o certificado e marque **Enforce HTTPS**.
+
+**Cloudflare:** se o `iaas.chat` estiver na Cloudflare, deixe o registro como
+**DNS only** (nuvem cinza) até o GitHub emitir o certificado. Depois, se quiser o
+proxy (nuvem laranja), use SSL/TLS em modo **Full** para não dar loop de redirect.
 
 ---
 
