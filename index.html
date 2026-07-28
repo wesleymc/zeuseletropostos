@@ -59,7 +59,7 @@
 
     <!-- ===================== HERO ===================== -->
     <section class="hero" id="hero">
-      <img class="hero__bg" src="./assets/images/carregador-frente.jpg" alt="Carro elétrico conectado a um carregador rápido" width="1280" height="1920" loading="eager" fetchpriority="high" />
+      <img class="hero__bg" src="./assets/images/carregador-frente-2.jpg" alt="Carro elétrico conectado a um carregador rápido" width="1280" height="1920" loading="eager" fetchpriority="high" />
       <div class="hero__scrim" aria-hidden="true"></div>
       <div class="container hero__inner">
         <div class="hero__content reveal">
@@ -302,7 +302,13 @@
         </div>
 
         <figure class="mockup reveal">
-          <img src="./assets/images/mockup-multipao.jpeg" alt="Simulação de como o ponto de recarga fica instalado em um estabelecimento comercial" loading="lazy" width="1024" height="531" />
+          <button class="mockup__btn" type="button" data-lightbox aria-label="Ampliar imagem da simulação">
+            <img src="./assets/images/mockup-multipao.jpeg" alt="Simulação de como o ponto de recarga fica instalado em um estabelecimento comercial" loading="lazy" width="1024" height="531" />
+            <span class="mockup__zoom" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg>
+              Toque para ampliar
+            </span>
+          </button>
           <figcaption>Simulação de instalação em ponto comercial. A cobertura contra sol e chuva entra na obra final.</figcaption>
         </figure>
       </div>
@@ -428,6 +434,15 @@
   <a href="#" class="fab-wpp js-wpp-direct" aria-label="Falar no WhatsApp">
     <svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor"><path d="M16 3a13 13 0 0 0-11.1 19.7L3 29l6.5-1.7A13 13 0 1 0 16 3zm0 23.7a10.7 10.7 0 0 1-5.4-1.5l-.4-.2-4 1 1-3.9-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.8.2s-.9 1-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-2.6-1.6 9.6 9.6 0 0 1-1.8-2.2c-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.4-.6 0-.3 0-.5 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.7c-.2 0-.6.1-.9.5a4 4 0 0 0-1.2 2.9c0 1.7 1.2 3.3 1.4 3.6.2.2 2.5 3.8 6 5.3 2.9 1.2 3.5 1 4.1.9.6 0 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5z"/></svg>
   </a>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+    <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Fechar">&times;</button>
+    <div class="lightbox__stage" id="lightboxStage">
+      <img class="lightbox__img" id="lightboxImg" src="" alt="" draggable="false" />
+    </div>
+    <div class="lightbox__hint">Dois dedos para dar zoom · toque duplo para aproximar · arraste para mover</div>
+  </div>
 
   <script src="./js/main.js"></script>
 </body>
