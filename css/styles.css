@@ -264,14 +264,8 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.12; letter-spacin
 
 .mockup { margin-top: 50px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); }
 .mockup__btn { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; position: relative; font: inherit; color: inherit; }
-.mockup__btn img { width: 100%; height: auto; display: block; }
-.mockup__zoom {
-  position: absolute; right: 12px; bottom: 12px; display: inline-flex; align-items: center; gap: 6px;
-  background: rgba(10,10,12,.72); backdrop-filter: blur(6px); color: #fff; font-family: var(--font-head);
-  font-size: .76rem; font-weight: 600; padding: 7px 11px; border-radius: 9px; border: 1px solid rgba(255,255,255,.16);
-  transition: background .2s, color .2s;
-}
-.mockup__btn:hover .mockup__zoom { background: rgba(255,200,61,.92); color: #10131f; border-color: transparent; }
+.mockup__btn img { width: 100%; height: auto; display: block; transition: opacity .2s; }
+.mockup__btn:hover img { opacity: .92; }
 .mockup figcaption { padding: 14px 20px; font-size: .86rem; color: var(--muted); background: var(--surface); text-align: center; }
 
 /* ---------- lightbox (zoom da imagem) ---------- */
@@ -289,7 +283,6 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.12; letter-spacin
   cursor: pointer; display: grid; place-items: center; transition: background .2s, color .2s;
 }
 .lightbox__close:hover { background: rgba(255,200,61,.92); color: #10131f; border-color: transparent; }
-.lightbox__hint { position: absolute; bottom: 18px; left: 0; right: 0; text-align: center; color: var(--muted); font-size: .82rem; pointer-events: none; padding: 0 16px; }
 
 /* ---------- faq ---------- */
 .faq { display: grid; gap: 12px; }
