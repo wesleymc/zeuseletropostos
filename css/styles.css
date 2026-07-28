@@ -1,6 +1,6 @@
 /* =========================================================
    Zeus Eletropostos — Landing page
-   Paleta: navy profundo + dourado Zeus (primária) + azul de apoio
+   Paleta: navy profundo + dourado Zeus
    ========================================================= */
 
 :root {
@@ -22,11 +22,10 @@
   --gold:      #FFC83D;
   --gold-2:    #F0A81E;
   --green:     #2FD07A;
-  --sky:       #6FC7FF;   /* azul de apoio (destaque do hero) */
 
   --grad-blue: linear-gradient(135deg, #FFD766 0%, #F0A81E 100%);
   --grad-gold: linear-gradient(135deg, #FFD766 0%, #F0A81E 100%);
-  --grad-text: linear-gradient(100deg, #6FC7FF 0%, #FFC83D 120%);
+  --grad-text: linear-gradient(100deg, #FFE08A 0%, #F0A81E 115%);
 
   /* medidas */
   --maxw: 1160px;
