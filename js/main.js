@@ -1,12 +1,12 @@
 /* =========================================================
-   Zeus Eletropostos — interações
+   Zeus Recharge — interações
    ========================================================= */
 (function () {
   'use strict';
 
   /* --- CONFIG: troque pelo número real da Zeus (formato internacional, só dígitos) --- */
   var WHATSAPP = '5592981540466'; // ex.: 55 (Brasil) + 92 (Manaus) + número
-  var MSG_PADRAO = 'Olá! Vim pelo site da Zeus Eletropostos e quero conversar sobre uma parceria para o meu ponto comercial.';
+  var MSG_PADRAO = 'Olá! Vim pelo site da Zeus Recharge e quero conversar sobre uma parceria para o meu ponto comercial.';
 
   function wppLink(text) {
     return 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(text || MSG_PADRAO);
@@ -113,7 +113,7 @@
       var local = (form.local.value || '').trim();
       var msg = (form.msg.value || '').trim();
 
-      var linhas = ['Olá! Vim pelo site da Zeus Eletropostos e quero conversar sobre uma parceria.'];
+      var linhas = ['Olá! Vim pelo site da Zeus Recharge e quero conversar sobre uma parceria.'];
       if (nome) linhas.push('\n• Nome: ' + nome);
       if (estab) linhas.push('• Estabelecimento: ' + estab);
       if (local) linhas.push('• Local: ' + local);
