@@ -136,11 +136,14 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.12; letter-spacin
   position: absolute; top: 0; right: 0; z-index: 0;
   height: 100%; width: auto; max-width: 64%;
   object-fit: cover; object-position: center;
+  /* funde a borda esquerda da foto no fundo, independente da largura da tela */
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.35) 22%, #000 50%);
+          mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.35) 22%, #000 50%);
 }
 .hero__scrim {
   position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background:
-    linear-gradient(90deg, var(--bg) 0%, var(--bg) 36%, rgba(6,7,9,.7) 52%, rgba(6,7,9,.15) 82%, rgba(6,7,9,0) 100%),
+    linear-gradient(90deg, var(--bg) 0%, rgba(6,7,9,.55) 28%, rgba(6,7,9,.12) 48%, transparent 62%),
     linear-gradient(180deg, rgba(6,7,9,.4) 0%, transparent 22%, transparent 60%, var(--bg) 100%);
 }
 .hero__inner { position: relative; z-index: 2; width: 100%; }
@@ -359,7 +362,8 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.12; letter-spacin
 /* ---------- responsive ---------- */
 @media (max-width: 940px) {
   .hero__badge { display: none; }
-  .hero__bg { width: 100%; max-width: none; height: 100%; object-fit: cover; object-position: 50% 42%; }
+  .hero__bg { width: 100%; max-width: none; height: 100%; object-fit: cover; object-position: 50% 42%;
+    -webkit-mask-image: none; mask-image: none; }
   .hero__scrim { background:
     linear-gradient(180deg, rgba(8,8,10,.5) 0%, rgba(8,8,10,.42) 34%, rgba(8,8,10,.8) 72%, rgba(10,10,12,.96) 100%); }
   .stats { grid-template-columns: 1fr 1fr; }
