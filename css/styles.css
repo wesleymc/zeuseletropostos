@@ -133,7 +133,9 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.12; letter-spacin
   display: flex; align-items: center; padding: 120px 0 72px;
 }
 .hero__bg {
-  position: absolute; top: 0; right: 0; z-index: 0;
+  position: absolute; top: 0; z-index: 0;
+  /* em telas largas, alinha a borda direita da foto ao bloco de conteúdo (nao ao canto do monitor) */
+  right: max(0px, calc((100% - var(--maxw)) / 2));
   height: 100%; width: auto; max-width: 64%;
   object-fit: cover; object-position: center;
   /* funde a borda esquerda da foto no fundo, independente da largura da tela */
