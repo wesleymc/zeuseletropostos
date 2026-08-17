@@ -375,7 +375,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.12; letter-spacin
   .equip__media { max-width: 280px; margin-inline: auto; }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1000px) {
   .nav {
     position: fixed; inset: 70px 0 auto 0; flex-direction: column; gap: 4px; align-items: stretch;
     background: rgba(10,10,12,.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line);
